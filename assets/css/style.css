@@ -4,22 +4,22 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Merienda';font-size: 22px;
+    font-family: 'fantasy';font-size: 22px;
     background-color: white;
 }
 
 header {
-    display: flex; /* Flex container to display the child elements as flex with space between and wrap */
+    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     list-style: none;
-    color: blueviolet;
+    color: black;
     height: 60px;
     font-size: 2vw;
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    font-family: 'Merienda';font-size: 22px;
+    font-family: 'fantasy';font-size: 22px;
   }
 
 .btnHeader {
@@ -27,14 +27,15 @@ header {
     background-color: white;
     text-decoration: none;
     border: 0;
-    outline: 0; /* Remove border around button */
-    color: blueviolet;
-    font-family: 'Merienda';font-size: 20px;
+    outline: 0;
+    color: black;
+    font-family: 'fantasy';font-size: 20px;
 }
 
 .btnHeader:hover {
 
-    background-color: pink;
+    background-color: green;
+    color: white;
     
   
     
@@ -43,10 +44,10 @@ header {
 .btn {
     border-radius: 12px;
     border: 0;
-    outline: 0; /* Remove border around button */
-    background-color: purple;
+    outline: 0;
+    background-color: black;
     color: white;
-    font-family: 'Merienda';font-size: 10px;
+    font-family: 'fantasy';font-size: 10px;
 }
 
 #mainDiv {
@@ -57,16 +58,15 @@ header {
     flex-direction: column;
     justify-content: center;
     margin-top: 50px;
-    font-family: 'Merienda';font-size: 22px;
+    font-family: 'fantasy';font-size: 22px;
 }
 
 #gridContainer {
-   /* width:65%; /* Contain the grid to a maximum of 80% of the flex wrapper */
     display: grid;
-    grid-template-columns: repeat(2, 1fr) 2fr 1fr;  /* Create a 4X4 grid of same size*/
-    grid-template-rows: repeat(10, 1fr); /* 4 rows of equal size */
-    gap: 10px 10px; /* Gap on x and y grid */
-    font-family: 'Merienda';font-size: 22px;
+    grid-template-columns: repeat(2, 1fr) 2fr 1fr; 
+    grid-template-rows: repeat(10, 1fr);
+    gap: 10px 10px; 
+    font-family: 'fantasy';font-size: 22px;
 }
 
 #questionDisplay {
@@ -108,10 +108,10 @@ header {
     padding: 10px 10px 10px 10px;
     border-radius: 10%;
     border: 0;
-    outline: 0; /* Remove border around button */
-    background-color: purple;
+    outline: 0; 
+    background-color: black;
     color: white;
-    font-family: 'Merienda';font-size: 15px;
+    font-family: 'fantasy';font-size: 15px;
 }
 
 #start-quiz {
@@ -120,11 +120,11 @@ header {
     padding: 10px 10px 10px 10px;
     border-radius: 10%;
     border: 0;
-    outline: 0; /* Remove border around button */
-    background-color: purple;
+    outline: 0; 
+    background-color: black;
     place-self: center;
     color: white;
-    font-family: 'Merienda';font-size: 15px;
+    font-family: 'fantasy';font-size: 15px;
 }
 
 #answer1 {
@@ -133,10 +133,10 @@ header {
     padding: 10px 10px 10px 10px;
     border-radius: 10%;
     border: 0;
-    outline: 0; /* Remove border around button */
-    background-color: purple;
+    outline: 0; 
+    background-color: black;
     color: white;
-    font-family: 'Merienda';font-size: 15px;
+    font-family: 'fantasy';font-size: 15px;
     margin-left: 25px;
 }
 
@@ -146,10 +146,10 @@ header {
     padding: 10px 10px 10px 10px;
     border-radius: 10%;
     border: 0;
-    outline: 0; /* Remove border around button */
-    background-color: purple;
+    outline: 0; 
+    background-color: black;
     color: white;
-    font-family: 'Merienda';font-size: 15px;
+    font-family: 'fantasy';font-size: 15px;
     margin-left: 25px;
     margin-left: 25px;
 
@@ -161,10 +161,10 @@ header {
     padding: 10px 10px 10px 10px;
     border-radius: 10%;
     border: 0;
-    outline: 0; /* Remove border around button */
-    background-color: purple;
+    outline: 0; 
+    background-color: black;
     color: white;
-    font-family: 'Merienda';font-size: 15px;
+    font-family: 'fantasy';font-size: 15px;
     margin-left: 25px;
 }
 
@@ -174,49 +174,48 @@ header {
     padding: 10px 10px 10px 10px;
     border-radius: 10%;
     border: 0;
-    outline: 0; /* Remove border around button */
-    background-color: purple;
+    outline: 0; 
+    background-color: black;
     color: white;
-    font-family: 'Merienda';font-size: 15px;
+    font-family: 'fantasy';font-size: 15px;
     margin-left: 25px;
 }
 
 #answer1:hover{
     
-    background-color: pink;
+    background-color: green;
      
 }
 
 #answer2:hover{
     
-    background-color: pink;
+    background-color: green;
   
 }
 
 #answer3:hover{
     
-    background-color: pink;
+    background-color: green;
   
 }
 
 #answer4:hover{
     
-    background-color: pink;
+    background-color: green;
   
 }
 
 #submitScore:hover{
     
-    background-color: pink;
+    background-color: green;
   
 }
 
 #answerCorrectWrongGrid {
-    /*width:65%; /* Contain the grid to a maximum of 80% of the flex wrapper */
     display: grid;
-    grid-template-columns: 4fr;  /* Create a 4X4 grid of same size*/
-    grid-template-rows: repeat(2, 1fr); /* 4 rows of equal size */
-    gap: 10px 10px; /* Gap on x and y grid */
+    grid-template-columns: 4fr; 
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px 10px; 
     font-family: 'Merienda';font-size: 22px;
 
 }
@@ -234,31 +233,31 @@ header {
     
     #answer1:hover{
         
-        background-color: purple;
+        background-color: green;
         
     }
 
     #answer2:hover{
         
-        background-color: purple;
+        background-color: green;
     
     }
 
     #answer3:hover{
         
-        background-color: purple;
+        background-color: green;
     
     }
 
     #answer4:hover{
         
-        background-color: purple;
+        background-color: green;
     
     }
 
     #submitScore:hover{
         
-        background-color: purple;
+        background-color: green;
     
     }
 
@@ -291,31 +290,31 @@ header {
 
     #answer1:hover{
         
-        background-color: purple;
+        background-color: green;
         
     }
 
     #answer2:hover{
         
-        background-color: purple;
+        background-color: green;
     
     }
 
     #answer3:hover{
         
-        background-color: purple;
+        background-color: green;
     
     }
 
     #answer4:hover{
         
-        background-color: purple;
+        background-color: green;
     
     }
 
     #submitScore:hover{
         
-        background-color: purple;
+        background-color: green;
     
     }
 
