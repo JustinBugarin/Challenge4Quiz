@@ -23,7 +23,6 @@ var enterInitialsTextAreaEl = document.createElement("enterInitialsTextArea"); /
 var button1234 = document.createElement("button"); // Test answer 1
 var timeLeft = 60; // Global time left assignment counter
 
-
 answer1BtnEl.style.display = 'none';
 answer2BtnEl.style.display = 'none';
 answer3BtnEl.style.display = 'none';
@@ -41,7 +40,6 @@ var questionsObject = {
         4 : "Strings must be enclosed with:"
     }
 };
-
 var answersObject = { 
     answers: { 
         0 : {
@@ -54,33 +52,28 @@ var answersObject = {
             1: "Curly Brackets",
             2: "Quotes",
             3: "Square Brackets"},
-        2 : { // Button #3
+        2 : { 
             0: "Javascript",
             1: "Terminal/bash",
             2: "For loops", 
             3: "Console.log"},      
-        3 : { // Answer to question 5 --> Button #2
+        3 : { 
             0: "Commas",
             1: "Curly brackets",
             2: "Quotes", 
             3: "Parentheses"},      
-        4 : { // Button #4
+        4 : { 
             0: "Number of strings",
             1: "Other arrays",
             2: "Booleans",
             3: "All of the above"},  
     }
 };
-
-
 htmlTimeLeft.textContent = timeLeft;
-
 viewHighScoresBtnEl.addEventListener("click", function() { 
-
     var quizUsers = "";
     var substringTest ="";
     var highScores = "";
-
     for (var i=0; i < localStorage.length; i++) {
         var checkUserValue = [];
         
@@ -95,21 +88,15 @@ viewHighScoresBtnEl.addEventListener("click", function() {
     window.alert(highScores);
 
 });
-
-submitScoreEl.addEventListener("click", function() { // Submit high scores
+submitScoreEl.addEventListener("click", function() { 
     
-
     var quizLocalStorage = "quiz";
     var quizUserDetails = "";
     var value = [];
     
-    //If good input the value will be assign properly.
     quizUserDetails = quizLocalStorage + enterInitialsTextArea.value 
-    value = [quizUserDetails,highScore] // Create an array for validation
+    value = [quizUserDetails,highScore] 
 
-
-    // Add test entry @local storage in order to be able to get the lentgh of the local storage.
-    // If user clears the data at local storage the below code will not work unless there is at least on entry.
     if (!localStorage.length) {
         localStorage.setItem("test","test");
     }
@@ -120,12 +107,9 @@ submitScoreEl.addEventListener("click", function() { // Submit high scores
         var checkUser = "";
         var checkUserValue = [];
 
-        // Assign value again
         quizUserDetails = quizLocalStorage + enterInitialsTextArea.value;
 
-        // Check if assigned value exist in the local storage
         checkUser = localStorage.getItem(quizUserDetails);
-        // quizInitial + score will be checked against the input from the user to validate if exist already in local storage
    
         if (checkUser == null) { // New user, no need to split
             localStorage.setItem(quizUserDetails, value); // Value is equal to 
@@ -171,7 +155,6 @@ submitScoreEl.addEventListener("click", function() { // Submit high scores
     }
     
 } );
-
 
 answer1BtnEl.addEventListener("mouseover", function() {
 
